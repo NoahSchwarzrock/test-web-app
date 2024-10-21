@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begrüßungsseite</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Willkommen auf der ultimativen Spaßseite!</h1>
+
+    <div id="greetingForm">
+        <label for="name">Gib deinen Namen ein:</label><br><br>
+        <input type="text" id="name" placeholder="Dein Name hier..."><br><br>
+        <button onclick="greetUser()">Grüß mich!</button>
+    </div>
+
+    <p id="greetingMessage"></p>
+
+    <script>
+        function greetUser() {
+            const name = document.getElementById("name").value;
+            const greetingMessage = document.getElementById("greetingMessage");
+
+            if (name) {
+                greetingMessage.textContent = `Hallo, ${name}! Schön, dass du hier bist!`;
+            } else {
+                greetingMessage.textContent = "Hey, gib doch deinen Namen ein!";
+            }
+        }
+    </script>
+    
+</body>
+</html>
